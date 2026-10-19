@@ -31,6 +31,8 @@ public class EditModel : PageModel
             return NotFound();
         }
         Book = book;
+        ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID",
+"FirstName", "LastName");
         ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
 "PublisherName");
         return Page();
