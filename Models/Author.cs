@@ -6,7 +6,7 @@ namespace Tirlea_Mihai_Lab2.Models
     {
         public int ID { get; set; }
 
-        [Display(Name = "AuthorName")]
+        [Display(Name = "Author")]
         public string FirstName { get; set; }
         [Display(Name = "")]
         public string LastName { get; set; }

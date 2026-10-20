@@ -9,6 +9,11 @@
   <ItemGroup>
     <Compile Remove="Migrations\20261016155005_Publisher.cs" />
     <Compile Remove="Migrations\20261016155005_Publisher.Designer.cs" />
+    <Compile Remove="Pages\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
