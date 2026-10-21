@@ -32,6 +32,7 @@ public class EditModel : BookCategoriesPageModel
         }*/
 
         Book = await _context.Book
+            .Include(b => b.Author)
             .Include(b => b.Publisher)
             .Include(b => b.BookCategories).ThenInclude(b => b.Category)
             .AsNoTracking()
