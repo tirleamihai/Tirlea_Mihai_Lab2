@@ -6,4 +6,5 @@ public class Tirlea_Mihai_Lab2Context(DbContextOptions<Tirlea_Mihai_Lab2Context>
     public DbSet<Tirlea_Mihai_Lab2.Models.Publisher> Publisher { get; set; } = default!;
     public DbSet<Tirlea_Mihai_Lab2.Models.Author> Author { get; set; } = default!;
     public DbSet<Tirlea_Mihai_Lab2.Models.Category> Category { get; set; } = default!;
+    public DbSet<Tirlea_Mihai_Lab2.Models.BookCategory> BookCategory { get; set; } = default!;
 }
