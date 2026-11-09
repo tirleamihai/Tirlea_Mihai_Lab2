@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Tirlea_Mihai_Lab2.Data;
 namespace Tirlea_Mihai_Lab2.Models
 {
     public class BookCategoriesPageModel : PageModel

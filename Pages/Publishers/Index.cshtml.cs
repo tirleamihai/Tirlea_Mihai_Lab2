@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Tirlea_Mihai_Lab2.Models;
 using Tirlea_Mihai_Lab2.Models.ViewModels;
-
+using Tirlea_Mihai_Lab2.Data;
 namespace Tirlea_Mihai_Lab2.Pages.Publishers;
 
 public class IndexModel : PageModel

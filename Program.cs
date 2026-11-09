@@ -1,11 +1,23 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Tirlea_Mihai_Lab2.Data;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("Tirlea_Mihai_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Tirlea_Mihai_Lab2Context' not found.");
 
 builder.Services.AddDbContext<Tirlea_Mihai_Lab2Context>(options => options.UseSqlServer(connectionString));
 
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<LibraryIdentityContext>();
+
 // Add services to the container.
-builder.Services.AddRazorPages();
+//builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<LibraryIdentityContext>(options =>
+
+options.UseSqlServer(builder.Configuration.GetConnectionString("Tirlea_Mihai_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Tirlea_Mihai_Lab2Context' not found.")));
+//builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+//options.SignIn.RequireConfirmedAccount = true)
+// .AddEntityFrameworkStores<LibraryIdentityContext>();
 
 var app = builder.Build();
 

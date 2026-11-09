@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Tirlea_Mihai_Lab2.Models;
-
+using Tirlea_Mihai_Lab2.Data;
 namespace Tirlea_Mihai_Lab2.Pages.Books;
 
 public class CreateModel : BookCategoriesPageModel
